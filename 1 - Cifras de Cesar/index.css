@@ -1,0 +1,38 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1{
+    text-align: center;
+}
+
+.sessaoInicial{
+    text-align: center;
+}
+
+.botaoCriptografar, .botaoDescriptografar{
+    height: 30px;
+    width: 150px;
+    box-shadow: inset 1px 1px 0px 0px rgb(73, 73, 253);
+    background: linear-gradient(to bottom, rgb(65, 65, 245) 5%, rgb(21, 21, 134) 100%);
+    background-color: rgb(75, 75, 255);
+    border-radius: 3px;
+    border: 1px solid rgb(4, 4, 182);
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 6px 12px;
+    text-decoration: none;
+}
+
+.botaoCriptografar:hover, .botaoDescriptografar:hover{
+    background: linear-gradient(to bottom, rgb(21, 21, 134) 5%, rgb(65, 65, 245) 100%);
+    background-color: rgb(21, 21, 134);
+}
+
+.botaoCriptografar:active, .botaoDescriptografar:active{
+    position: relative;
+    top: 1px;
+}

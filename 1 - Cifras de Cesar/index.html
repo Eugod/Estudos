@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifra de César</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>
+        Cifra de César
+    </h1>
+
+    <section class="sessaoInicial">
+        <div>
+            <h3>Escolha uma das opções abaixo</h3>
+
+            <p>
+                <button class="botaoCriptografar">Criptografar</button>
+            </p>
+
+            <p>
+                <button class="botaoDescriptografar">Descriptografar</button>
+            </p>
+        </div>
+    </section>
+
+    <section class="sessaoCriptografia" style="display: none;">
+        <div>
+            <p>
+                Mensagem que deseja criptografar: <br>
+                <input type="text" class="inputCriptoMsg">
+            </p>
+            
+            <p>
+                Método de substituição: <br>
+                <input type="number" class="inputCriptoMetodo">
+            </p>
+        </div>
+
+        <div>
+            <p>
+                <button class="botaoCriptografarMsg">Criptografar</button>
+            </p>
+        </div>
+
+        <div class="divSaidaMsgCripto" style="display: none;"></div>
+
+        <div class="divVoltarCripto">
+            <p>
+                <button class="botaoVoltarCripto">Voltar</button>
+            </p>
+        </div>
+    </section>
+
+    <section class="sessaoDescriptografia" style="display: none;">
+        <div>
+            <p>
+                Mensagem que deseja descriptografar: <br>
+                <input type="text" class="inputDescriptoMsg">
+            </p>
+            
+            <p>
+                Método de substituição: <br>
+                <input type="number" class="inputDescriptoMetodo">
+            </p>
+        </div>
+
+        <div>
+            <p>
+                <button class="botaoDescriptografarMsg">Descriptografar</button>
+            </p>
+        </div>
+
+        <div class="divSaidaMsgDescripto" style="display: none;"></div>
+
+        <div class="divVoltarCripto">
+            <p>
+                <button class="botaoVoltarDescripto">Voltar</button>
+            </p>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+</html>
