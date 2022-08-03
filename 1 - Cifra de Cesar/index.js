@@ -146,6 +146,8 @@ function voltar(sessao, inputMsg, inputMetodo, div) {
 
     sessao.setAttribute('style', 'display: none');
 
+    div.setAttribute('style', 'display: none')
+
     inputMsg.value = '';
     inputMetodo.value = '';
     div.innerHTML = '';
