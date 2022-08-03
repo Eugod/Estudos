@@ -96,7 +96,6 @@ function criptografarMsg(msg, metodo) {
             };
 
             msgCriptografada += letraDoAlfabeto;
-
         };
     };
 
@@ -123,7 +122,6 @@ function descriptografarMsg(msg, metodo) {
             };
 
             msgDescriptografada += letraDoAlfabeto;
-
         };
     };
 
