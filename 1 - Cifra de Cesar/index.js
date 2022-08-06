@@ -7,6 +7,8 @@ let botaoDescriptografar = document.querySelector('.botaoDescriptografar');
 
 let sessaoInicial = document.querySelector('.sessaoInicial');
 
+let option;
+
 // Sessão Criptografia -------------------------------------------------------------------
 
 let botaoCriptografarMsg = document.querySelector('.botaoCriptografarMsg');
@@ -34,15 +36,17 @@ let inputDescriptoMetodo = document.querySelector('.inputDescriptoMetodo');
 botaoCriptografar.addEventListener('click', () => {
     sessaoInicial.setAttribute('style', 'display: none');
     sessaoCriptografia.removeAttribute('style');
+    option = 'cripto';
 });
 
 botaoDescriptografar.addEventListener('click', () => {
     sessaoInicial.setAttribute('style', 'display: none');
     sessaoDescriptografia.removeAttribute('style');
+    option = 'descripto';
 });
 
 botaoCriptografarMsg.addEventListener('click', () => {
-    criptografia(inputCriptoMsg, inputCriptoMetodo, criptografarMsg, divSaidaMsgCripto);
+    criptografia(inputCriptoMsg, inputCriptoMetodo, criptografarOuDescriptografarMsg, divSaidaMsgCripto);
 });
 
 botaoVoltarCripto.addEventListener('click', () => {
@@ -50,7 +54,7 @@ botaoVoltarCripto.addEventListener('click', () => {
 });
 
 botaoDescriptografarMsg.addEventListener('click', () => {
-    criptografia(inputDescriptoMsg, inputDescriptoMetodo, descriptografarMsg, divSaidaMsgDescripto);
+    criptografia(inputDescriptoMsg, inputDescriptoMetodo, criptografarOuDescriptografarMsg, divSaidaMsgDescripto);
 });
 
 botaoVoltarDescripto.addEventListener('click', () => {
@@ -76,56 +80,46 @@ function criptografia(inputMsg, inputMetodo, funcao, divSaida) {
     };
 };
 
-function criptografarMsg(msg, metodo) {
-    let msgCriptografada = '';
+function criptografarOuDescriptografarMsg(msg, metodo) {
+    let msgCriptoOuDescripto = '';
     let letraDoAlfabeto;
     let indiceNoAlfabeto;
 
-    for(let i = 0; i < msg.length; i++) {
+    for (let i = 0; i < msg.length; i++) {
         indiceNoAlfabeto = alfabeto.indexOf(msg[i]);
-        
-        if(indiceNoAlfabeto == -1){
-            msgCriptografada += msg[i];
 
-        } else {
-            if (indiceNoAlfabeto + metodo > 25) {
-                letraDoAlfabeto = alfabeto[(indiceNoAlfabeto + metodo) - 26];
+        if (option == 'cripto') {
+            if (indiceNoAlfabeto == -1) {
+                msgCriptoOuDescripto += msg[i];
 
             } else {
-                letraDoAlfabeto = alfabeto[indiceNoAlfabeto + metodo];  
-            };
+                if (indiceNoAlfabeto + metodo > 25) {
+                    letraDoAlfabeto = alfabeto[(indiceNoAlfabeto + metodo) - 26];
 
-            msgCriptografada += letraDoAlfabeto;
+                } else {
+                    letraDoAlfabeto = alfabeto[indiceNoAlfabeto + metodo];
+                };
+
+                msgCriptoOuDescripto += letraDoAlfabeto;
+            };
+        } else {
+            if (indiceNoAlfabeto == -1) {
+                msgCriptoOuDescripto += msg[i];
+
+            } else {
+                if (indiceNoAlfabeto - metodo < 0) {
+                    letraDoAlfabeto = alfabeto[(indiceNoAlfabeto - metodo) + 26];
+
+                } else {
+                    letraDoAlfabeto = alfabeto[indiceNoAlfabeto - metodo];
+                };
+
+                msgCriptoOuDescripto += letraDoAlfabeto;
+            };
         };
     };
 
-    return msgCriptografada;
-};
-
-function descriptografarMsg(msg, metodo) {
-    let msgDescriptografada = '';
-    let letraDoAlfabeto;
-    let indiceNoAlfabeto;
-
-    for(let i = 0; i < msg.length; i++) {
-        indiceNoAlfabeto = alfabeto.indexOf(msg[i]);
-        
-        if(indiceNoAlfabeto == -1){
-            msgDescriptografada += msg[i];
-
-        } else {
-            if (indiceNoAlfabeto - metodo < 0) {
-                letraDoAlfabeto = alfabeto[(indiceNoAlfabeto - metodo) + 26];
-
-            } else {
-                letraDoAlfabeto = alfabeto[indiceNoAlfabeto - metodo];  
-            };
-
-            msgDescriptografada += letraDoAlfabeto;
-        };
-    };
-
-    return msgDescriptografada;
+    return msgCriptoOuDescripto;
 };
 
 function mostrarMsg(div, msg) {
