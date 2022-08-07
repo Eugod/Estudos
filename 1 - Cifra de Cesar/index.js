@@ -128,7 +128,7 @@ function mostrarMsg(div, msg) {
     div.innerHTML = '';
 
     div.innerHTML += `
-    <p>Mensagem traduzida:</p>
+    <p><b>Mensagem traduzida:</b></p>
     <p>${msg}</p>
     `;
 };

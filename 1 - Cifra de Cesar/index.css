@@ -1,6 +1,6 @@
 body{
     font-family: 'Times New Roman', Times, serif;
-    /*background-image: url('cesar.jpg');*/
+    background-image: url('cesar.jpg');
     background-size: cover;
 }
 
@@ -83,14 +83,24 @@ h3{
     padding: 5px;
 }
 
-.pMsg{
+.pMsgCripto{
     margin-right: 10px;
     font-size: 20px;
 }
 
-.pMetodo{
+.pMetodoCripto{
     margin-left: 10px;
     font-size: 20px;
+}
+
+.pMsgDescripto{
+    margin-right: 10px;
+    font-size: 19px;
+}
+
+.pMetodoDescripto{
+    margin-left: 10px;
+    font-size: 19px;
 }
 
 .inputCriptoMsg, .inputDescriptoMsg{
