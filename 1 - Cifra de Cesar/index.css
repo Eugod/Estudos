@@ -1,18 +1,41 @@
 body{
     font-family: 'Times New Roman', Times, serif;
+    background-image: url('cesar.jpg');
+    background-size: cover;
 }
 
 h1{
     text-align: center;
+    font-size: 80px;
+    color: #ffffff;
 }
 
 .sessaoInicial{
     text-align: center;
+    background-color: rgba(128, 128, 128, 0.712);
+    width: 550px;
+    height: 600px;
+    border-radius: 40px;
+    margin: auto;
+    position: absolute;
+    top: 0; 
+    bottom: 0;
+    left: 0; 
+    right: 0;
+}
+
+.divInicial{
+    margin-top: 20%;
+}
+
+h3{
+    font-size: 35px;
+    color: #ffffff;
 }
 
 .botaoCriptografar, .botaoDescriptografar{
-    height: 30px;
-    width: 150px;
+    height: 60px;
+    width: 250px;
     box-shadow: inset 1px 1px 0px 0px rgb(73, 73, 253);
     background: linear-gradient(to bottom, rgb(65, 65, 245) 5%, rgb(21, 21, 134) 100%);
     background-color: rgb(75, 75, 255);
@@ -21,10 +44,11 @@ h1{
     display: inline-block;
     cursor: pointer;
     color: #ffffff;
-    font-size: 13px;
+    font-size: 20px;
     font-weight: bold;
     padding: 6px 12px;
     text-decoration: none;
+    margin-top: 50px;
 }
 
 .botaoCriptografar:hover, .botaoDescriptografar:hover{
