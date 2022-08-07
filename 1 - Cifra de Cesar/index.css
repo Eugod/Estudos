@@ -22,6 +22,7 @@ h1{
     bottom: 0;
     left: 0; 
     right: 0;
+    box-shadow: 3px 3px 3px grey;
 }
 
 .divInicial{
@@ -61,7 +62,7 @@ h3{
     top: 1px;
 }
 
-.sessaoCriptografia{
+.sessaoCriptografia, .sessaoDescriptografia{
     background-color: rgba(128, 128, 128, 0.712);
     width: 550px;
     height: 600px;
@@ -72,9 +73,10 @@ h3{
     bottom: 0;
     left: 0; 
     right: 0;
+    box-shadow: 3px 3px 3px grey;
 }
 
-.divCriptografia{
+.divCriptografia, .divDescriptografia{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -91,21 +93,28 @@ h3{
     font-size: 20px;
 }
 
-.inputCriptoMsg{
-    width: 218px;
+.inputCriptoMsg, .inputDescriptoMsg{
+    width: 298px;
+    height: 100px;
+    resize: none;
+    background-color: rgb(255, 255, 255, 0.712);
+    box-shadow: 3px 3px 3px grey;
+    font-size: 15px;
 }
 
-.inputCriptoMetodo{
+.inputCriptoMetodo, .inputDescriptoMetodo{
     width: 35px;
+    background-color: rgb(255, 255, 255, 0.712);
+    box-shadow: 3px 3px 3px grey;
 }
 
-.divBotaoCriptografar{
+.divBotaoCriptografar, .divBotaoDescriptografar{
     text-align: center;
 }
 
-.botaoCriptografarMsg{
+.botaoCriptografarMsg, .botaoDescriptografarMsg{
     height: 30px;
-    width: 150px;
+    width: 140px;
     box-shadow: inset 1px 1px 0px 0px rgb(73, 73, 253);
     background: linear-gradient(to bottom, rgb(65, 65, 245) 5%, rgb(21, 21, 134) 100%);
     background-color: rgb(75, 75, 255);
@@ -120,7 +129,7 @@ h3{
     text-decoration: none;
 }
 
-.divSaidaMsgCripto{
+.divSaidaMsgCripto, .divSaidaMsgDescripto{
     margin: auto;
     color: white;
     background-color: rgb(0, 0, 0, 0.712);
@@ -129,6 +138,8 @@ h3{
     text-align: justify;
     padding: 5px;
     border-radius: 20px;
+    box-shadow: 3px 3px 3px grey;
+    font-size: 15px;
 }
 
 .divVoltarCripto{
@@ -137,9 +148,9 @@ h3{
     bottom: 5px;
 }
 
-.botaoVoltarCripto{
+.botaoVoltarCripto, .botaoVoltarDescripto{
     height: 30px;
-    width: 150px;
+    width: 80px;
     box-shadow: inset 1px 1px 0px 0px rgb(73, 73, 253);
     background: linear-gradient(to bottom, rgb(65, 65, 245) 5%, rgb(21, 21, 134) 100%);
     background-color: rgb(75, 75, 255);

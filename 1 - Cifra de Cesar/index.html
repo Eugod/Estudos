@@ -30,7 +30,7 @@
         <div class="divCriptografia">
             <p class="pMsg">
                 <b>Mensagem que deseja criptografar:</b> <br>
-                <input type="text" class="inputCriptoMsg">
+                <textarea class="inputCriptoMsg" id="" cols="30" rows="10"></textarea>
             </p>
             
             <p class="pMetodo">
@@ -55,19 +55,19 @@
     </section>
 
     <section class="sessaoDescriptografia" style="display: none;">
-        <div>
-            <p>
-                Mensagem que deseja descriptografar: <br>
-                <input type="text" class="inputDescriptoMsg">
+        <div class="divDescriptografia">
+            <p class="pMsg">
+                <b>Mensagem que deseja descriptografar:</b> <br>
+                <textarea class="inputDescriptoMsg" id="" cols="30" rows="10"></textarea>
             </p>
             
-            <p>
-                Método de substituição: <br>
+            <p class="pMetodo">
+                <b>Método de substituição:</b> <br>
                 <input type="number" class="inputDescriptoMetodo">
             </p>
         </div>
 
-        <div>
+        <div class="divBotaoDescriptografar">
             <p>
                 <button class="botaoDescriptografarMsg">Descriptografar</button>
             </p>
