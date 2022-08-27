@@ -8,8 +8,7 @@ let listagemDeTarefas = document.querySelector('.listagemDeTarefas');
 botaoAddTarefa.addEventListener('click', () => {
     addTarefa(inputAddTarefa.value);
     clearInput(inputAddTarefa);
-    listarTarefas()
-    console.log(tarefas);
+    listarTarefas();
 });
 
 document.addEventListener('keypress', (e) => {
@@ -27,7 +26,7 @@ listagemDeTarefas.addEventListener('click', (e) => {
         let tarefasFiltradas = tarefas.filter(obj => obj.id != parentId);
 
         tarefas = tarefasFiltradas;
-        
+
         listarTarefas();
     };
 });
