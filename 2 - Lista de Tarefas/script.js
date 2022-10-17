@@ -16,7 +16,6 @@ botaoAddTarefa.addEventListener('click', () => {
         clearInput(inputAddTarefa);
         listarTarefas();
 
-        localStorage.removeItem('tarefas');
         localStorage.setItem('tarefas', JSON.stringify(tarefas));
     };
 });
@@ -30,7 +29,6 @@ document.addEventListener('keypress', (e) => {
             clearInput(inputAddTarefa);
             listarTarefas();
 
-            localStorage.removeItem('tarefas');
             localStorage.setItem('tarefas', JSON.stringify(tarefas));
         };
     };
@@ -46,7 +44,6 @@ listagemDeTarefas.addEventListener('click', (e) => {
 
         listarTarefas();
 
-        localStorage.removeItem('tarefas');
         localStorage.setItem('tarefas', JSON.stringify(tarefas));
     };
 });
